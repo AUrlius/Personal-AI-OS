@@ -1,0 +1,83 @@
+# Personal-AI-OS 集成配置文件
+
+# 记忆系统集成配置
+MEMORY_INTEGRATION:
+  source_repo: "mempalace"
+  module_path: "./integration/mempalace"
+  features:
+    - vector_storage
+    - semantic_search
+    - memory_association
+    - context_awareness
+
+# 技能系统集成配置
+SKILLS_INTEGRATION:
+  source_repo: "khazix-skills"
+  module_path: "./integration/khazix-skills"
+  features:
+    - plugin_architecture
+    - sandbox_execution
+    - dynamic_loading
+    - permission_control
+
+# 职业助手集成配置
+CAREER_INTEGRATION:
+  source_repo: "career-ops"
+  module_path: "./integration/career-ops"
+  features:
+    - resume_analysis
+    - job_matching
+    - interview_prep
+    - career_planning
+
+# 认知模型集成配置
+COGNITION_INTEGRATION:
+  source_repo: "nuwa-skill"
+  module_path: "./integration/nuwa-skill"
+  features:
+    - cognitive_distillation
+    - reasoning_engine
+    - bias_detection
+    - decision_support
+
+# 知识图谱集成配置
+GRAPH_INTEGRATION:
+  source_repo: "graphify"
+  module_path: "./integration/graphify"
+  features:
+    - knowledge_graph
+    - relationship_extraction
+    - entity_linking
+    - graph_visualization
+
+# Agent框架集成配置
+AGENT_INTEGRATION:
+  source_repo: "hermes-agent-orange-book"
+  module_path: "./integration/hermes-agent-orange-book"
+  features:
+    - agent_architecture
+    - multi_agent_system
+    - task_coordination
+    - memory_management
+
+# AI大脑集成配置
+BRAIN_INTEGRATION:
+  source_repo: "gbrain"
+  module_path: "./integration/gbrain"
+  features:
+    - brain_simulation
+    - neural_network
+    - cognitive_modeling
+    - decision_making
+
+# NLP学习资源集成配置
+NLP_INTEGRATION:
+  source_repo: "NLP-notes"
+  module_path: "./integration/NLP-notes"
+  submodules:
+    - course: "HuggingFace课程"
+    - d2l_zh: "动手学深度学习"
+    - nlp_notes: "中文NLP笔记"
+    - jalammar: "可视化教程"
+    - notebooks: "实践示例"
+    - nlp_progress: "SOTA追踪"

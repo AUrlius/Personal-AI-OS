@@ -1,0 +1,148 @@
+# Personal-AI-OS 认知系统配置
+# 基于 nuwa-skill 架构设计
+
+system:
+  name: "Personal-AI-OS Cognitive System"
+  version: "1.0.0"
+  debug: false
+  log_level: "INFO"
+
+model:
+  embedding_dim: 768
+  hidden_dim: 512
+  num_layers: 4
+  dropout: 0.1
+  learning_rate: 0.001
+  max_sequence_length: 512
+  attention_heads: 8
+  feedforward_dim: 2048
+
+reasoning:
+  max_steps: 10
+  confidence_threshold: 0.7
+  timeout_seconds: 30
+  enable_chain_of_thought: true
+  enable_tree_of_thoughts: false
+  enable_react: true
+  enable_plan_and_execute: true
+  max_branches: 3
+  reasoning_temperature: 0.7
+  enable_bias_detection: true
+  enable_meta_cognition: true
+
+memory:
+  storage_type: "vector_db"
+  vector_database: "chroma"
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  max_memory_items: 10000
+  memory_ttl_days: 365
+  enable_compression: true
+  compression_ratio: 0.8
+  enable_summarization: true
+  summarization_threshold: 1000
+  similarity_threshold: 0.7
+
+skills:
+  enable_sandbox: true
+  sandbox_timeout_seconds: 30
+  max_memory_per_skill_mb: 128
+  allowed_permissions:
+    - "network"
+    - "filesystem_read"
+    - "database_read"
+  max_concurrent_skills: 5
+  skill_cache_enabled: true
+  skill_cache_ttl_seconds: 3600
+  enable_dynamic_loading: true
+
+bias_detection:
+  enabled: true
+  sensitivity: 0.6
+  detection_methods:
+    - "pattern_matching"
+    - "statistical_analysis"
+    - "contextual_analysis"
+  correction_strategies:
+    - "counter_argumentation"
+    - "alternative_perspective"
+    - "confidence_adjustment"
+  bias_types_to_detect:
+    - "confirmation"
+    - "anchoring"
+    - "availability"
+    - "hindsight"
+    - "overconfidence"
+    - "attribution"
+    - "status_quo"
+    - "loss_aversion"
+
+personalization:
+  enable_adaptive_reasoning: true
+  enable_bias_correction: true
+  enable_cognitive_adaptation: true
+  learning_rate: 0.01
+  forgetting_factor: 0.95
+  adaptation_window: 10
+  profile_update_frequency: 5
+  cognitive_profile_persistence: true
+  profile_backup_enabled: true
+  profile_backup_interval_hours: 24
+
+performance:
+  max_concurrent_tasks: 10
+  cache_enabled: true
+  cache_ttl_seconds: 3600
+  cache_size_limit: 1000
+  enable_profiling: false
+  memory_limit_mb: 2048
+  cpu_limit_percent: 80.0
+  response_timeout_seconds: 60
+
+security:
+  enable_input_validation: true
+  enable_output_sanitization: true
+  max_input_length: 10000
+  max_output_length: 5000
+  enable_sandbox_execution: true
+  sandbox_timeout_seconds: 30
+  max_memory_per_task_mb: 128
+  api_rate_limit: 100
+  enable_audit_logging: true
+
+data_retention:
+  memory_retention_days: 365
+  log_retention_days: 90
+  backup_enabled: true
+  backup_frequency_hours: 24
+  encryption_enabled: true
+
+api:
+  host: "0.0.0.0"
+  port: 8080
+  cors_origins:
+    - "*"
+  enable_rate_limiting: true
+  rate_limit_requests: 100
+  rate_limit_window_seconds: 60
+
+monitoring:
+  enable_metrics: true
+  metrics_collection_interval_seconds: 60
+  enable_tracing: false
+  log_slow_queries: true
+  slow_query_threshold_ms: 1000
+
+integration:
+  enable_external_apis: true
+  openai_api_key: ${OPENAI_API_KEY}  # 从环境变量加载
+  anthropic_api_key: ${ANTHROPIC_API_KEY}
+  embedding_api_timeout: 10
+  llm_api_timeout: 30
+
+features:
+  enable_memory_streaming: true
+  enable_real_time_analysis: false
+  enable_collaborative_filtering: false
+  enable_federated_learning: false
+  enable_multi_modal_processing: false
+  enable_emotion_recognition: false
